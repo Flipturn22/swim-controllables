@@ -48,14 +48,18 @@ alter table check_ins enable row level security;
 alter table weekly_check_ins enable row level security;
 alter table meet_times enable row level security;
 
+drop policy if exists "profiles own row" on swimmer_profiles;
 create policy "profiles own row" on swimmer_profiles
   for all using (auth.uid() = user_id) with check (auth.uid() = user_id);
 
+drop policy if exists "check_ins own rows" on check_ins;
 create policy "check_ins own rows" on check_ins
   for all using (auth.uid() = user_id) with check (auth.uid() = user_id);
 
+drop policy if exists "weekly own rows" on weekly_check_ins;
 create policy "weekly own rows" on weekly_check_ins
   for all using (auth.uid() = user_id) with check (auth.uid() = user_id);
 
+drop policy if exists "meets own rows" on meet_times;
 create policy "meets own rows" on meet_times
   for all using (auth.uid() = user_id) with check (auth.uid() = user_id);

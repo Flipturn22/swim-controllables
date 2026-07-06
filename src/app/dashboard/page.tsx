@@ -72,6 +72,7 @@ function DashboardContent() {
             />
             <StatCard label="Meet times" value={String(timeCount)} href="/times" />
             <StatCard label="My Clues" value="View" href="/trends" />
+            <StatCard label="Cloud sync" value="Set up" href="/sync" />
           </div>
         </div>
 

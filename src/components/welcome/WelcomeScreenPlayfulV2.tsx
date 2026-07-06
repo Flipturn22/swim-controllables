@@ -48,10 +48,16 @@ export function WelcomeScreenPlayfulV2() {
         </div>
       </main>
 
-      <footer className="relative z-10 px-6 pb-6 text-center">
+      <footer className="relative z-10 space-y-2 px-6 pb-6 text-center">
+        <Link
+          href="/sync"
+          className="block text-sm font-medium text-[#0f4c5c] hover:underline"
+        >
+          Save logs to cloud
+        </Link>
         <Link
           href="/learn"
-          className="text-sm font-medium text-[#0f4c5c]/70 hover:text-[#0f4c5c]"
+          className="block text-sm font-medium text-[#0f4c5c]/70 hover:text-[#0f4c5c]"
         >
           What are controllables?
         </Link>
