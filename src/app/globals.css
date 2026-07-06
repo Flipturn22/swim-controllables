@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f7f5f1;
+  --foreground: #1e293b;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+}
+
+.input {
+  @apply w-full rounded-lg border border-[#d9d2c7] bg-white px-3 py-2.5 text-base text-slate-800;
+}
+
+.chip {
+  @apply min-h-11 rounded-lg border border-[#d9d2c7] bg-white px-2 py-2.5 text-sm font-medium text-slate-700 transition active:scale-[0.98];
+}
+
+.chip-selected {
+  @apply border-[#0f4c5c] bg-[#e8f4f6] text-[#0f4c5c];
+}
+
+.btn-primary {
+  @apply w-full rounded-xl bg-[#0f4c5c] py-3.5 text-base font-medium text-white active:bg-[#0c3e4b];
+}
+
+.btn-secondary {
+  @apply rounded-xl border border-[#d9d2c7] bg-white px-4 py-3.5 text-base font-medium text-slate-700 active:bg-[#faf8f5];
+}
+
+@keyframes roll-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.roll-in {
+  animation: roll-in 0.35s ease-out forwards;
+}
+
+@keyframes welcome-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.welcome-float {
+  animation: welcome-float 4s ease-in-out infinite;
+}
