@@ -7,6 +7,7 @@ const NAV = [
   { href: "/weekly", label: "Weekly" },
   { href: "/times", label: "Times" },
   { href: "/trends", label: "Clues" },
+  { href: "/sync", label: "Sync" },
   { href: "/learn", label: "Learn" },
 ] as const;
 

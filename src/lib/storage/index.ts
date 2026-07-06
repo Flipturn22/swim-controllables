@@ -1,11 +1,13 @@
 import { LocalAppStore } from "./local-store";
+import { SyncAppStore } from "./sync-store";
 import type { AppStore } from "./types";
 import type { AppData, CheckIn, MeetTime, SwimmerProfile, WeeklyCheckIn } from "@/lib/types";
 
 export type { AppStore } from "./types";
 export { LocalAppStore } from "./local-store";
+export { SyncAppStore } from "./sync-store";
 
-let store: AppStore = new LocalAppStore();
+let store: AppStore = new SyncAppStore();
 
 /** Replace the active store (e.g. API-backed sync in a future phase). */
 export function setAppStore(next: AppStore): void {
